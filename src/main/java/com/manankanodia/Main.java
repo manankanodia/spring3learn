@@ -55,4 +55,8 @@ public class Main {
         customerRepository.save(customer);
     }
 
+    @DeleteMapping("{customerId}")
+    public void deleteCustomer(@PathVariable("customerId") Integer id) {
+        customerRepository.deleteById(id);
+    }
 }
